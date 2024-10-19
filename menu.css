@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    background-color: #10ac84;
+    height: 100vh;
+    width: 250px;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px;
+
+}
+
+aside nav a {
+    display: block;
+    padding: 2px;
+    background: #2c3e50;
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+

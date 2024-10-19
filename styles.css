@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "Century Gothic";
+    src: url("./fonts/Century Gothic/centurygothic.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Sans";
+}
+
+a {
+    font-family: "Century Gothic";
+}
+
+body {
+    font-family: "Raleway";
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    background-color: #10ac84;
+    color: #eee;
+    position: fixed;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Nav */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 15px;
+    gap: 25px;
+    background-color: #576574;
+    height: 60px;
+    position: fixed;
+    top: 93.5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eee;
+    padding: 5px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+}
+
+nav a:nth-child(3) {
+flex-grow: 1;
+}
+
+nav a:hover {
+    color: aqua;
+    transition: all 0.2s ease;
+}
+
+main {
+    padding: 30px;
+    text-align: justify;
+}
+
+main::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 153px;
+}
+
+
+#menu-button {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #eee;
+    color: #eee;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 510px) {
+
+    nav {
+        flex-direction: column;
+        top: 93.5px;
+        height: auto;
+        left: -100%;
+        transition: all .3s ease;
+    }
+
+    main::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 66.5px;
+    }
+
+    #menu-button {
+        display: block;
+    }
+
+}
+
+.visible {
+    left: 0;
+}
+
